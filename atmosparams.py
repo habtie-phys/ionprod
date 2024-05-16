@@ -41,5 +41,6 @@ def get_params(dt, alts_km, glat, glon):
     H = (kB*Tn/(m*g))*1e2
     rho_g_cm3 = 1e-3*rho # in g/cm^3
     #
-    return (rho_g_cm3, m, H)
+    natmos = {"N2":nN2, "O2":nO2, "O":nO}
+    return (natmos, rho_g_cm3, m, H)
 # %%
